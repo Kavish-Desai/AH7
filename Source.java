@@ -1,3 +1,4 @@
+import java.util.*;
 class Node<T> {
   T val;
   Node<T> next;
@@ -8,10 +9,15 @@ class Node<T> {
   }
 }
 
-class Source {
+public class Source {
   public static int sumList(Node<Integer> head) {
     // todo
-    return;
+    int sum = 0;
+    while(head != null){
+      sum += head.val;
+      head = head.next;
+    }
+    return sum;
   }
 
   public static void main(String[] args) {
